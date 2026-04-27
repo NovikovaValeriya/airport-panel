@@ -1,0 +1,115 @@
+/* Глобальные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f0f4f8;
+    color: #1a2b3c;
+    line-height: 1.5;
+}
+
+/* ====== HEADER ====== */
+.airport-header {
+    background: linear-gradient(135deg, #0a3a4e, #125b75);
+    color: white;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo-icon {
+    font-size: 2.5rem;
+}
+.header-info {
+    display: flex;
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.15);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+}
+
+/* ====== LAYOUT + SIDEBAR ====== */
+.main-layout {
+    display: flex;
+    max-width: 1400px;
+    margin: 2rem auto;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+.sidebar {
+    width: 280px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.sidebar-nav ul {
+    list-style: none;
+}
+.sidebar-nav li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #1a2b3c;
+    text-decoration: none;
+    font-weight: 500;
+    border-left: 4px solid transparent;
+    transition: 0.2s;
+}
+.sidebar-nav li a:hover {
+    background: #e6f0f9;
+    border-left-color: #125b75;
+}
+.sidebar-nav li a.active {
+    background: #d4e7f7;
+    border-left-color: #0a3a4e;
+    color: #0a3a4e;
+    font-weight: 600;
+}
+.sidebar-info {
+    padding: 1.5rem;
+    border-top: 1px solid #e0e6ed;
+    background: #f9fbfd;
+}
+.sidebar-info h4 {
+    color: #0a3a4e;
+    margin-bottom: 0.75rem;
+}
+
+/* ====== FOOTER ====== */
+.airport-footer {
+    background-color: #092835;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+.footer-container p:first-child {
+    margin-bottom: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
